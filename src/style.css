@@ -1,1 +1,32 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+.container {
+  position: relative; /* Establece el contenedor como relativo */
+  width: 100vh;
+  height: auto;
+}
+#IMAGE {
+  width: 100vh; /* La imagen ocupa todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+.overlay {
+  position: absolute; /* Posiciona el div de forma absoluta */
+  top: 0; /* Coloca el div en la parte superior */
+  left: 0; /* Coloca el div en la parte izquierda */
+  width: 100%; /* El div ocupa todo el ancho del contenedor */
+  height: 100%; /* El div ocupa todo el alto del contenedor */
+  color: white; /* Color del texto */
+  display: flex; /* Para centrar el contenido */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+}
+.fondo {
+  background-image: url("https://trucosdemagia.net/wp-content/uploads/2018/10/tapetes-magia.jpg"); /* Ruta de la imagen */
+  background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+  background-position: center; /* Centra la imagen en el contenedor */
+  width: 100%; /* Ancho del contenedor */
+  height: 300px; /* Alto del contenedor */
+  color: white; /* Color del texto */
+  display: flex; /* Para centrar el contenido */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+}

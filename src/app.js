@@ -3,12 +3,16 @@ console.log("wazaaaaa");
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
+// import "https://trucosdemagia.net/wp-content/uploads/2018/10/tapetes-magia.jpg";
+
+let titulo = "Magic trik"; // Definir la variable
+document.title = titulo; // Asignar el valor de la variable al título de la pági
 
 window.onload = function() {
   //write your code here
   console.log("Hello Rigo from the console!");
+  getcard();
 };
 
 // //  ♦ ♥ ♠ ♣
@@ -25,47 +29,37 @@ window.onload = function() {
 let boton = getcard();
 getcard();
 
-function getcard() {
-  document.querySelector("#numero").innerHTML = numero();
-  switch (pinta()) {
-    case 1:
-      document.querySelector("#pinta1").innerHTML =
-        '<i class="fa-solid fa-heart"></i>';
-      document.querySelector("#pinta2").innerHTML =
-        '<i class="fa-solid fa-heart"></i>';
-      break;
-    case 2:
-      document.querySelector("#pinta1").innerHTML =
-        '<i class="fa-solid fa-diamond"></i>';
-      document.querySelector("#pinta2").innerHTML =
-        '<i class="fa-solid fa-diamond"></i>';
-      break;
-    case 3:
-      document.querySelector("#pinta1").innerHTML =
-        '<i class="fa-solid fa-clover"></i>';
-      document.querySelector("#pinta2").innerHTML =
-        '<i class="fa-solid fa-clover"></i>';
-      break;
-    case 4:
-      document.querySelector("#pinta1").innerHTML =
-        '<i class="fa-solid fa-rocket"></i>';
-      document.querySelector("#pinta2").innerHTML =
-        '<i class="fa-solid fa-rocket"></i>';
-      break;
-
-    default:
-      document.querySelector("#pinta1").innerHTML =
-        '<i class="<i class="fa-solid fa-wrench"></i>';
-      document.querySelector("#pinta2").innerHTML =
-        '<i class="<i class="fa-solid fa-rocket"></i>';
-      break;
-  }
-}
-
 function numero() {
   return Math.ceil(Math.random() * 13);
 }
 
 function pinta() {
   return Math.ceil(Math.random() * 4);
+}
+
+function getcard() {
+  document.querySelector("#numero").innerHTML = numero();
+  switch (pinta()) {
+    case 1:
+      document.querySelector("#pinta1").innerHTML = "♦";
+      document.querySelector("#pinta2").innerHTML = "♦";
+      break;
+    case 2:
+      document.querySelector("#pinta1").innerHTML = "♥";
+      document.querySelector("#pinta2").innerHTML = "♥";
+      break;
+    case 3:
+      document.querySelector("#pinta1").innerHTML = "♠";
+      document.querySelector("#pinta2").innerHTML = "♠";
+      break;
+    case 4:
+      document.querySelector("#pinta1").innerHTML = "♣";
+      document.querySelector("#pinta2").innerHTML = "♣";
+      break;
+
+    default:
+      document.querySelector("#pinta1").innerHTML = "♣";
+      document.querySelector("#pinta2").innerHTML = "♥";
+      break;
+  }
 }

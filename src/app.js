@@ -1,4 +1,3 @@
-console.log("wazaaaaa");
 import "bootstrap";
 import "./style.css";
 

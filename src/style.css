@@ -1,14 +1,19 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+/* @font-face {
+  font-family: "fuentePoker";
+  src: url("src/assets/img/JqkasWild-w1YD6.ttf") format("truetype");
+} */
+
 .fondo {
   position: relative;
 }
-.overlay {
+
+#carta {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 5; /* Ajusta este valor según sea necesario para que esté encima de la imagen de fondo */
-}
-#carta {
+  z-index: 5;
+  /* font-family: "fuentePoker", sans-serif; */
   display: inline-block;
   width: 58mm;
   height: 88mm;
@@ -16,7 +21,15 @@
   box-shadow: 10px 5px 5px red;
   position: relative;
   border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  top: 25px;
+  transition: 0.9s ease;
 }
+#carta:hover {
+  box-shadow: 0 0 100px rgb(0, 238, 255);
+}
+
 .top-left,
 .bottom-right,
 .center {
@@ -56,4 +69,15 @@
 
 .pica {
   color: black;
+}
+
+.logo {
+  cursor: pointer;
+  transition: 0.2s;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, opacity 2s ease;
+  transform: scale(1);
+  background: linear-gradient(to bottom right, 105, 165, 214, 105, 165, 214);
+}
+.logo:hover {
+  transform: scale(1.9) translateZ(20px);
 }
